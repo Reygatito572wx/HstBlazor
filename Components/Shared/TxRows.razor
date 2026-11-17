@@ -1,0 +1,8 @@
+<div class="table-wrap"><table><thead><tr><th>Identificador</th><th>Usuario</th><th>Valor</th><th>Fecha y hora</th><th>Estado</th><th>Medio / receptor</th><th>Riesgo</th></tr></thead><tbody>@foreach(var t in Rows){<tr class="clickable" @onclick="()=>OnSelect.InvokeAsync(t)"><td><strong>@t.Id</strong></td><td>@t.User</td><td>@Money(t.Amount)</td><td>@t.Date.ToString("dd MMM yyyy, HH:mm")</td><td><span class="badge badge-@ToneStatus(t.Status)">@t.Status</span></td><td>@t.Payment<small>@t.Recipient</small></td><td><span class="badge badge-@Tone(t.Risk)">@t.Risk</span></td></tr>}</tbody></table></div>
+@code {
+ [Parameter] public List<TransactionRecord> Rows {get;set;}=[];
+ [Parameter] public EventCallback<TransactionRecord> OnSelect {get;set;}
+ private static string Money(long n)=>string.Format(System.Globalization.CultureInfo.GetCultureInfo("es-CO"),"{0:C0}",n);
+ private static string Tone(string s)=>s=="Alto"?"red":s=="Medio"?"yellow":"green";
+ private static string ToneStatus(string s)=>s=="Verificada"?"green":s=="Con inconsistencias"?"yellow":"gray";
+}

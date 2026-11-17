@@ -1,0 +1,84 @@
+{
+  "Transactions": [
+    {
+      "Id": "HST-2025-001",
+      "User": "Laura G\u00F3mez",
+      "Amount": 245000,
+      "Date": "2025-05-22T09:14:00",
+      "Status": "Verificada",
+      "Payment": "PSE",
+      "Recipient": "Comercio Andino",
+      "Device": "Conocido",
+      "Location": "Bogot\u00E1",
+      "Notes": "Operaci\u00F3n habitual",
+      "Risk": "Bajo",
+      "Factors": "Dispositivo y ubicaci\u00F3n habituales"
+    },
+    {
+      "Id": "HST-2025-002",
+      "User": "Carlos Ruiz",
+      "Amount": 8750000,
+      "Date": "2025-05-22T10:42:00",
+      "Status": "Con inconsistencias",
+      "Payment": "Transferencia",
+      "Recipient": "Servicios Globales",
+      "Device": "Nuevo",
+      "Location": "Ubicaci\u00F3n inusual",
+      "Notes": "Monto distinto al registro de referencia",
+      "Risk": "Alto",
+      "Factors": "Monto superior a $5.000.000, Dispositivo nuevo, Ubicaci\u00F3n inusual, Datos inconsistentes"
+    },
+    {
+      "Id": "HST-2025-003",
+      "User": "Ana Torres",
+      "Amount": 980000,
+      "Date": "2025-05-22T11:20:00",
+      "Status": "Pendiente",
+      "Payment": "Tarjeta d\u00E9bito",
+      "Recipient": "Mercado Central",
+      "Device": "Conocido",
+      "Location": "Medell\u00EDn",
+      "Notes": "Pendiente de revisi\u00F3n",
+      "Risk": "Medio",
+      "Factors": "Transacci\u00F3n pendiente de verificaci\u00F3n"
+    },
+    {
+      "Id": "HST-2025-004",
+      "User": "Diego Le\u00F3n",
+      "Amount": 6200000,
+      "Date": "2025-05-21T16:08:00",
+      "Status": "Verificada",
+      "Payment": "PSE",
+      "Recipient": "Inversiones Norte",
+      "Device": "Conocido",
+      "Location": "Cali",
+      "Notes": "Monto alto validado",
+      "Risk": "Medio",
+      "Factors": "Monto superior a $5.000.000"
+    },
+    {
+      "Id": "HST-2025-005",
+      "User": "Sof\u00EDa M\u00E9ndez",
+      "Amount": 125000,
+      "Date": "2025-05-21T14:35:00",
+      "Status": "Verificada",
+      "Payment": "Billetera digital",
+      "Recipient": "Librer\u00EDa Nacional",
+      "Device": "Conocido",
+      "Location": "Bogot\u00E1",
+      "Notes": "Compra acad\u00E9mica",
+      "Risk": "Bajo",
+      "Factors": "Sin factores de riesgo relevantes"
+    }
+  ],
+  "Alerts": [
+    {
+      "Id": "ALT-001",
+      "TxId": "HST-2025-002",
+      "Level": "Alto",
+      "Reason": "Monto alto, dispositivo nuevo, ubicaci\u00F3n inusual e inconsistencias",
+      "Date": "2025-05-22T10:43:00",
+      "Status": "Activa"
+    }
+  ]
+}
